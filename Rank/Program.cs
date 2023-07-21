@@ -28,8 +28,7 @@ namespace Rank
 
 						rank = ranks[j] + 1;
 
-						if (!duplicates.ContainsKey(arr[i])) duplicates.Add(arr[i], new List<double>());
-
+						duplicates.Add(arr[i], new List<double>());
 						duplicates[arr[i]].Add(ranks[j]);
 						break;
 					}
@@ -54,7 +53,7 @@ namespace Rank
 
 			Console.WriteLine("Numbers: " + string.Join(", ", arr));
 			Console.WriteLine("Ranks: " + string.Join(", ", ranks));
-			Console.ReadLine();
+			Console.ReadKey();
 		}
 	}
 }
